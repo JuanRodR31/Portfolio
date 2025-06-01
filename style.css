@@ -1,0 +1,255 @@
+@font-face {
+    font-family:poppins;
+    src: url(/fonts/Poppins-Medium.ttf);
+}
+.font {
+    font-family: poppins;
+  }
+
+a{
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color:rgb(255, 248, 147);
+    position: relative;
+    padding: 10px;
+
+  }
+  
+a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    background-color:transparent;
+    transform-origin: bottom center;
+    transform: scaleY(0.1);
+    transition: all 0.1s ease-in-out;
+  }
+  
+a:hover::before {
+    transform: scaleY(1);
+    background-color: #34d2ee77;
+  }
+
+h2 {
+    color: rgb(255, 248, 147);
+    padding-left: 10%;
+}
+strong {
+    color: rgb(253, 239, 107);
+}
+p {
+    color: rgb(255, 255, 255);
+    font-family: poppins;
+}
+li {
+    color: rgb(255, 255, 255);
+}
+body {
+    background-color: #090821;;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.container {
+    width: 150%;
+    height: 100px;
+    background-color:beige;
+    align-items: center;
+    text-align: center;
+    padding:10px;
+    display: flex;
+    
+
+}
+.container2 {
+    width: 50%;
+    height: 100px;
+    background-color:rgb(255, 255, 0);
+    align-items: center;
+    text-align: center;
+    padding:10px;
+    display: flex;
+
+}
+/* border-box sirve para que el el ancho sea width height y no el contenido 
+ por defecto en content box , hay que sumar padiding y bordes*/
+
+.mitad {
+    display: flex   ;
+}
+legend {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+label {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+input {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+textarea {
+    font-family:poppins;
+}
+.head {
+    background-color: rgb(135, 153, 177);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+
+}
+
+body {
+    margin:0px;
+    padding-top: 20px;
+}
+.header {
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(41,40,93,1) 100%);
+    padding: 10px ;
+    display: flex;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.seccion {
+    scroll-margin-top: 70px;
+}
+.quien-soy {
+    flex: 1;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+    gap: 60px;
+}   
+.espaciadolista {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.initialtext {
+    padding-top: 50px;
+    
+}
+h1 {
+    color: rgb(255, 255, 255);
+}
+.center {
+    display: flex;
+    justify-content: center;
+   
+}
+.down {
+    position: relative;
+    justify-content: center;
+   
+}
+.padding {
+    padding-left: 20%;
+    padding-right: 20%;
+}   
+h1 {
+    color: rgb(253, 255, 116);
+}
+footer{
+    text-align: center;
+}
+
+
+/* PROJECTS SECTION STYLING */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between project cards */
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.proyecto-item {
+    background-color: #1a1a3a; /* Consistent with form background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.proyecto-item h3 {
+    color: rgb(255, 248, 147);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.proyecto-item p {
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.proyecto-item a {
+    display: inline-block; /* Allows padding and margin */
+    background-color: rgb(34,193,195); /* Use your accent color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.proyecto-item a:hover {
+    background-color: rgba(34,193,195, 0.8); /* Slightly darker on hover */
+    text-decoration: none; /* Keep underline off */
+}
+
+/* Ensure the a::before pseudo-element for navigation doesn't affect these links */
+.proyecto-item a::before {
+    content: none; /* Disable the underline effect for project links */
+}
+.proyecto-item a:hover::before {
+    background-color: transparent; /* Ensure no background on hover for project links */
+}
+
+input{
+    background:  transparent;
+    border-color: aqua;
+    border-width: 4px;
+}
+
+.send{
+    color: rgb(255, 255, 255);
+    font-family:poppins;
+    background-color: aqua;
+    border-radius: 10%;
+}
+
+
+textarea{
+    background-color: transparent;
+    border-color: aqua;
+    border-radius: 6%;
+    border-width: 4px;
+    
+}
